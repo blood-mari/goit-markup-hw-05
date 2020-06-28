@@ -10,6 +10,7 @@
   --paragraph-text-color: #757575;
   --accent-text-color: #2196f3;
   --dark-theme-text-color: #ffffff;
+  --transparent-background: rgba(47, 48, 58, 0.8);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --plain-button-color: #f5f4fa;
   --section-staff-color: #f5f4fa;
@@ -345,16 +346,29 @@ button {
   text-transform: uppercase;
   text-align: center;
   color: var(--dark-theme-text-color);
-  background-color: var(--paragraph-text-color);
+  background-color: var(--transparent-background);
 
   padding-top: 27px;
   padding-bottom: 27px;
   padding-left: 82px;
   padding-right: 82px;
+
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.examples-title:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .we-do-item {
   width: calc((100% - 30px * 2) / 3);
+  position: relative;
 }
 
 .we-do-item > img {
@@ -405,6 +419,10 @@ button {
   background-color: var(--main-background-color);
 
   padding: 30px 32px 24px;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .icon-social {
@@ -432,7 +450,6 @@ button {
 
 .clients-link {
   border: 1px solid var(--border-color);
-  stroke-width: 1px;
   border-radius: 4px;
 
   width: 170px;
@@ -443,8 +460,8 @@ button {
   align-items: center;
 }
 
-.clients-item a:hover,
-.clients-item a:focus {
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--accent-text-color);
   --color1: var(--accent-text-color);
   --color2: var(--accent-text-color);
