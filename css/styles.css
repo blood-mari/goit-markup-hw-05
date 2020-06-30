@@ -92,6 +92,7 @@ ul {
   line-height: 1.14;
 
   border: 1px solid #e5e5e5;
+  background-color: var(--main-background-color);
 }
 
 /* Logo site header */
@@ -107,13 +108,13 @@ ul {
   color: var(--main-text-color);
 }
 
-header .logo {
+.page-header .logo {
   margin-right: 85px;
 }
 
 /* Navigation */
 
-header .container {
+.page-header .container {
   display: flex;
   align-items: center;
 
