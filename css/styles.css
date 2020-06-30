@@ -86,6 +86,7 @@ ul {
 
 .page-header {
   position: fixed;
+  z-index: 2;
   min-height: 80px;
   width: 100%;
   font-weight: 500;
@@ -343,7 +344,22 @@ button {
   justify-content: space-between;
 }
 
+/* .we-do-item::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+} */
+
 .we-do-list .examples-title {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  opacity: 0.4;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -356,17 +372,19 @@ button {
   padding-bottom: 27px;
   padding-left: 82px;
   padding-right: 82px;
-
-  position: absolute;
-  bottom: 3px;
-  left: 0;
-  width: 100%;
-
-  opacity: 0.4;
 }
 
-.examples-title:hover {
+.we-do-item:hover .examples-title {
   opacity: 1;
+}
+
+/* .we-do-item:hover::before {
+  content: "";
+  opacity: 1;
+  cursor: pointer;
+} */
+
+.we-do-item:hover {
   cursor: pointer;
 }
 
@@ -666,14 +684,43 @@ footer .tel {
   color: var(--paragraph-text-color);
 }
 
+.work-item-thumb {
+  position: relative;
+}
+
 .work-list-item .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
   font-size: 18px;
   line-height: 1.56;
-  background-color: var(--accent-text-color);
   color: var(--dark-theme-text-color);
 
-  display: none;
   padding: 63px 24px;
+}
+
+.work-item-thumb::before {
+  position: absolute;
+  opacity: 0;
+  content: "";
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+
+  display: inline-block;
+}
+
+.work-item-thumb:hover .description {
+  opacity: 1;
+}
+
+.work-item-thumb:hover::before {
+  opacity: 1;
 }
 
 .work-list-item img,
@@ -689,6 +736,8 @@ footer .tel {
 }
 
 .work-list-item {
+  /* position: relative; */
+
   background-color: #ffffff;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -711,3 +760,43 @@ footer .tel {
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
 }
+
+/* Выпадающее меню */
+
+/* .site-nav li:nth-child(-n + 4) {
+  margin-right: 50px;
+}
+
+.open-menu {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 0;
+}
+
+.menu-title {
+  display: inline;
+}
+
+.open-menu .link {
+  color: var(--main-text-color);
+  display: block;
+}
+
+.submenu a {
+  margin-top: 10px;
+}
+
+.open-menu .link:hover {
+  color: var(--accent-text-color);
+}
+
+.open-menu .submenu {
+  position: absolute;
+  display: none;
+  margin-left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.open-menu:hover .submenu {
+  display: block;
+} */
