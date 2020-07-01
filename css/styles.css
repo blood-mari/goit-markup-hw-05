@@ -688,6 +688,12 @@ footer .tel {
   position: relative;
 }
 
+/* .work-list-item:hover .work-item-info,
+.work-list-item:focus .work-item-info {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+} */
+
 .work-list-item .description {
   position: absolute;
   top: 50%;
@@ -723,6 +729,11 @@ footer .tel {
   opacity: 1;
 }
 
+.work-item-thumb:hover .work-item-info {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .work-list-item img,
 .team-item img {
   display: block;
@@ -736,11 +747,7 @@ footer .tel {
 }
 
 .work-list-item {
-  /* position: relative; */
-
   background-color: #ffffff;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
 
   margin-right: 30px;
   width: calc((100% - 60px) / 3);
