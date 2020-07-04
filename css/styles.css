@@ -726,7 +726,7 @@ footer .tel {
   padding: 63px 24px;
 }
 
-.overlay-describtion {
+.overlay-description {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -739,7 +739,7 @@ footer .tel {
   height: 100%;
 }
 
-.work-item-thumb:hover .overlay-describtion {
+.work-item-thumb:hover .overlay-description {
   transform: translateY(0);
 }
 
